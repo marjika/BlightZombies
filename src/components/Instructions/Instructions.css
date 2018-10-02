@@ -1,0 +1,14 @@
+
+.instructionsContent {
+   
+    position: fixed;
+    bottom: 100px;
+    background-color: #9eafb8;
+    max-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.dropup:hover .dropbtn {
+    background-color: #9eafb8;
+}

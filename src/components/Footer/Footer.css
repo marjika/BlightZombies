@@ -1,0 +1,18 @@
+.navbar-footer {
+    background-color: #4CAF50;
+    overflow: hidden;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+li .nav-item {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 10px;
+}

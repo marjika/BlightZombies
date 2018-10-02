@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Sophie Clark",
+        "occupation": "quarantine specialist",
+        "startingCityId": 2
+    },
+    {
+        "id": 2,
+        "name": "Earl Cole",
+        "occupation": "researcher",
+        "startingCityId": 8
+    },
+    {
+        "id": 3,
+        "name": "Yul Kwon",
+        "occupation": "contingency planner",
+        "startingCityId": 12
+    },
+    {
+        "id": 4,
+        "name": "Sandra Diaz-Twine",
+        "occupation": "field operative",
+        "startingCityId": 18
+    },
+    {
+        "id": 5,
+        "name": "Jeremy Collins",
+        "occupation": "general",
+        "startingCityId": 22
+    }
+]

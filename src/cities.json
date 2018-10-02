@@ -1,0 +1,177 @@
+[
+    {
+        "id": 1,
+        "location": "Atlanta",
+        "connections": ["Charlotte", "Jacksonville", "Pittsburgh"], 
+        "x": 665,
+        "y": 385    
+    },
+    {
+        "id": 2,
+        "location": "Nashville",
+        "connections": ["Columbus", "New Orleans", "Charlotte"], 
+        "x": 630,
+        "y": 350
+    },
+    {
+        "id": 3,
+        "location": "Charlotte",
+        "connections": ["Nashville", "Atlanta", "New Orleans", "Austin"], 
+        "x": 755,
+        "y": 335
+    },
+    {
+        "id": 4,
+        "location": "Jacksonville",
+        "connections": ["New Orleans", "Atlanta", "Des Moines"], 
+        "x": 720,
+        "y": 455
+    },
+    {
+        "id": 5,
+        "location": "New Orleans",
+        "connections": ["Dallas", "Charlotte", "Nashville", "Jacksonville"], 
+        "x": 590,
+        "y": 460
+    },
+    {
+        "id": 6,
+        "location": "Pittsburgh",
+        "connections": ["Atlanta", "Rochester", "Washington, D.C."], 
+        "x": 720,
+        "y": 240
+    },
+    {
+        "id": 7,
+        "location": "New York",
+        "connections": ["Boston", "Washington, D.C.", "Rochester"], 
+        "x": 800,
+        "y": 220
+    },
+    {
+        "id": 8,
+        "location": "Boston",
+        "connections": ["Washington, D.C.", "New York", "Columbus"], 
+        "x": 830,
+        "y": 180
+    },
+    {
+        "id": 9,
+        "location": "Washington, D.C.",
+        "connections": ["Pittsburgh", "Boston", "New York"], 
+        "x": 775,
+        "y": 270
+    },
+    {
+        "id": 10,
+        "location": "Rochester",
+        "connections": ["Pittsburgh", "New York", "Chicago"], 
+        "x": 750,
+        "y": 190
+    },
+    {
+        "id":11,
+        "location": "Des Moines",
+        "connections": ["Jacksonville", "Denver", "Detroit"], 
+        "x": 520,
+        "y": 250
+    },
+    {
+        "id": 12,
+        "location": "Columbus",
+        "connections": ["Nashville", "Boston", "Chicago"], 
+        "x": 685,
+        "y": 270
+    },
+    {
+        "id": 13,
+        "location": "Chicago",
+        "connections": ["Columbus", "Rochester", "Minneapolis"], 
+        "x": 600,
+        "y": 230
+    },
+    {
+        "id": 14,
+        "location": "Detroit",
+        "connections": ["Minneapolis", "Des Moines", "Salt Lake City"], 
+        "x": 670,
+        "y": 210
+    },
+    {
+        "id": 15,
+        "location": "Minneapolis",
+        "connections": ["Chicago", "Detroit", "Seattle"], 
+        "x": 520,
+        "y": 185
+    },
+    {
+        "id": 16,
+        "location": "Salt Lake City",
+        "connections": ["Detroit", "Los Angeles", "Portland", "Phoenix"], 
+        "x": 275,
+        "y": 240
+    },
+    {
+        "id": 17,
+        "location": "Seattle",
+        "connections": ["Minneapolis", "Portland", "Los Angeles"], 
+        "x": 140,
+        "y": 80
+    },
+    {
+        "id": 18,
+        "location": "Portland",
+        "connections": ["Salt Lake City", "Seattle", "San Francisco"], 
+        "x": 140,
+        "y": 130
+    },
+    {
+        "id": 19,
+        "location": "Los Angeles",
+        "connections": ["Salt Lake City", "San Francisco", "Seattle"], 
+        "x": 125,
+        "y": 325
+    },
+    {
+        "id": 20,
+        "location": "San Francisco",
+        "connections": ["Los Angeles", "Portland", "Phoenix"], 
+        "x": 100,
+        "y": 250
+    },
+    {
+        "id": 21,
+        "location": "Dallas",
+        "connections": ["New Orleans", "Denver", "Austin"], 
+        "x": 475,
+        "y": 415
+    },
+    {
+        "id": 22,
+        "location": "Denver",
+        "connections": ["Des Moines", "Dallas", "Santa Fe"], 
+        "x": 370,
+        "y": 265
+    },
+    {
+        "id": 23,
+        "location": "Phoenix",
+        "connections": ["San Francisco", "Santa Fe", "Salt Lake City"], 
+        "x": 240,
+        "y": 385
+    },
+    {
+        "id": 24,
+        "location": "Santa Fe",
+        "connections": ["Denver", "Phoenix", "Austin"], 
+        "x": 340,
+        "y": 345
+    },
+    {
+        "id": 25,
+        "location": "Austin",
+        "connections": ["Dallas", "Santa Fe", "Charlotte"], 
+        "x": 460,
+        "y": 455
+    }
+]

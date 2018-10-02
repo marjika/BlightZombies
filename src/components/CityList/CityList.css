@@ -1,0 +1,10 @@
+ul {
+    list-style: none;
+  }
+
+  .players{
+      /* max-width: 20%; */
+      padding: 0;
+      margin: 0;
+      
+  }
