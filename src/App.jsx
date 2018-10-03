@@ -10,7 +10,7 @@ import Win from "./components/pages/Win";
 import Header from './components/Header'
 import Home from './components/Home'
 
-// test
+//test
 
 const DisplayLinks = props => {
 	if (props.loggedIn) {
