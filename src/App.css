@@ -27,4 +27,13 @@
   margin: 0;
   padding: 0;
 }
+.navbar {
+  background-color: transparent;
+  background: transparent;
+  border-color: transparent;
+}
+
+.nav-item {
+  color: black;
+}
 
