@@ -1,19 +1,19 @@
-body {
-    background-image: url("../images/sign.jpg");
+.LoginForm {
+    background-image: url("../images/signup.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     height: 860px;
   }
   
-  form {
-  background: #fff;
-  opacity: 0.9;
-  padding: 10px;
-  max-width: 400px;
-  margin: 20px auto 0;
-  box-shadow: 0 0 16px #222;
-  border-radius: 2px;
+    form {
+    background: #fff;
+    opacity: 0.9;
+    padding: 10px;
+    max-width: 400px;
+    margin: 20px auto 0;
+    box-shadow: 0 0 16px #222;
+    border-radius: 2px;
   }
   h2 {
     padding:10px;
