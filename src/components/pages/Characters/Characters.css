@@ -1,0 +1,7 @@
+.characters {
+  background-image: url("../../images/blue.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 860px;
+}

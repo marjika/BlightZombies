@@ -1,6 +1,5 @@
 import React from "react";
 import CityList from "../CityList";
-//import Player from "../Player";
 import USMap from "../USMap";
 import Modal from "../Modal";
 import Footer from "../Footer";
@@ -59,21 +58,33 @@ class Board extends React.Component {
         this.drawCanvas()
     }
 
-
     componentDidUpdate() {
         this.updateCanvas();
     }
 
+    // updateCanvas() {
+    //     const ctx = this.refs.canvas.getContext('2d');
+    
+    //     var imageObj1 = new Image();
+    //     imageObj1.src = 'https://s-media-cache-ak0.pinimg.com/236x/d7/b3/cf/d7b3cfe04c2dc44400547ea6ef94ba35.jpg'
+    //  imageObj1.onload = function() {
+    //         ctx.drawImage(imageObj1,0,0);
+    // }
+    
+
     drawCanvas() {
         const canvas = this.refs.canvas
         const ctx = canvas.getContext("2d")
-        const img = this.refs.image
+        const img = new Image();
+        img.src = usmap
 
+        img.onload = () =>{
         ctx.drawImage(img, 0, 0, img.width, img.height,    
             0, 0, canvas.width, canvas.height);
             this.state.infections.map((item, index) => {
                 circle(ctx, cities[index].x, cities[index].y, item)
             });
+        }
         }
 
     clearCanvas() {
@@ -85,7 +96,8 @@ class Board extends React.Component {
     updateCanvas() {
         const canvas = this.refs.canvas
         const ctx = canvas.getContext("2d")
-        const img = this.refs.image
+        const img = new Image();
+        img.src = usmap
 
         ctx.drawImage(img, 0, 0, img.width, img.height,    
             0, 0, canvas.width, canvas.height);
@@ -155,7 +167,7 @@ class Board extends React.Component {
         if (!this.state.missionOne) {
             this.setState({ missionOne: true });
             this.setState({ modalText: "Mission complete. Help the others." }, () => {
-                this.setState({audio: "intro"})
+                this.setState({audio: "background1"})
                 this.setState({sound: true})
                 this.showModal();
             })
@@ -169,7 +181,7 @@ class Board extends React.Component {
         if (!this.state.missionTwo) {
             this.setState({ missionTwo: true });
             this.setState({ modalText: "Mission complete. Help the others." }, () => {
-                this.setState({audio: "intro"})
+                this.setState({audio: "background1"})
                 this.setState({sound: true})
                 this.showModal();
             })
@@ -183,7 +195,7 @@ class Board extends React.Component {
         if (!this.state.missionThree) {
             this.setState({ missionThree: true });
             this.setState({ modalText: "Mission complete. Help the others." }, () => {
-                this.setState({audio: "intro"})
+                this.setState({audio: "background1"})
                 this.setState({sound: true})
                 this.showModal();
             })
@@ -197,7 +209,7 @@ class Board extends React.Component {
         if (!this.state.missionFour) {
             this.setState({ missionFour: true });
             this.setState({ modalText: "Mission complete. Help the others." }, () => {
-                this.setState({audio: "intro"})
+                this.setState({audio: "background1"})
                 this.setState({sound: true})
                 this.showModal();
             })
@@ -230,7 +242,7 @@ class Board extends React.Component {
                     <Row>
                         <Col size="md-9">
                             <canvas ref="canvas" width={1000} height={563} />
-                            <img ref="image" src={usmap} alt="" className="hidden" />
+                            {/* <img ref="image" src={usmap} alt="" className="hidden" /> */}
                         </Col>
                         <Col size="md-3">
                             <CityList

@@ -4,6 +4,7 @@
     position: relative;
     bottom: 0;
     width: 100%;
+    padding-left: 10px;
 }
 
 li .nav-item {

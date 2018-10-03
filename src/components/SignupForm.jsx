@@ -46,7 +46,7 @@ class SignupForm extends Component {
 		}
 		return (
 		<div class="signUp">
-			<form className="SignupForm" action="#" method="post">
+			<form className="SignupForm" action="" method="post">
 				<h2>Sign Up</h2>
 				<label htmlFor="username" class="floatLabel">Username: </label>
 				<input

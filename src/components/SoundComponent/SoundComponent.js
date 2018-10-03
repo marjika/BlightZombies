@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Sound from 'react-sound';
 
-import IntroAudio from './sounds/thunder.mp3';
-//import Background1Audio from './background1.mp3';
+import IntroAudio from './sounds/ScarySound.mp3';
+import Background1Audio from './sounds/thunder.mp3';
 import VirusAudio from './sounds/shotgun.mp3';
 import OutbreakAudio from './sounds/Dramatic-heartbeat-sound-effect.mp3';
 
@@ -12,8 +12,8 @@ class SoundComponent extends Component {
         switch(this.props.audio) {
             case "intro":
                 return IntroAudio
-            // case "background1":
-            //     return {someFile}
+            case "background1":
+                return Background1Audio
             case "virus":
                 return VirusAudio
             case "outbreak":

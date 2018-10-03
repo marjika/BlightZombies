@@ -4,6 +4,8 @@ import { Route, Link } from 'react-router-dom'
 import './App.css'
 import LoginForm from './components/Login/LoginForm'
 import SignupForm from './components/SignupForm'
+import Intro from "./components/pages/Intro";
+import Characters from "./components/pages/Characters";
 import Game from "./components/pages/Game";
 import Lose from "./components/pages/Lose";
 import Win from "./components/pages/Win";
@@ -24,6 +26,11 @@ const DisplayLinks = props => {
 						</Link>
 					</li>
 					<li className="nav-item">
+						<Link to="/intro" className="nav-link" style={{color:"whitesmoke"}}>
+							Intro to Blight
+						</Link>
+					</li>
+					<li className="nav-item">
 						<Link to="/game" className="nav-link" style={{color:"whitesmoke"}} >
 							Play Blight
 						</Link>
@@ -41,17 +48,17 @@ const DisplayLinks = props => {
 			<nav className="navbar">
 				<ul className="nav">
 					<li className="nav-item">
-						<Link to="/" className="nav-link">
+						<Link to="/" className="nav-link" style={{color:"whitesmoke"}}>
 							Home
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link to="/login" className="nav-link">
+						<Link to="/login" className="nav-link" style={{color:"whitesmoke"}}>
 							login
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link to="/signup" className="nav-link">
+						<Link to="/signup" className="nav-link" style={{color:"whitesmoke"}}>
 							sign up
 						</Link>
 					</li>
@@ -101,6 +108,7 @@ class App extends Component {
 				})
 			}
 		})
+		window.location.assign("/")
 	}
 
 	_login(username, password) {
@@ -140,6 +148,8 @@ class App extends Component {
 						/>}
 				/>
 				<Route exact path="/signup" component={SignupForm} />
+				<Route exact path="/intro" component={Intro} />
+				<Route exact path="/characters" component={Characters} />
 				<Route exact path="/game" component={Game} />
 				<Route exact path="/lose" component={Lose} />
 				<Route exact path="/win" component={Win} />
