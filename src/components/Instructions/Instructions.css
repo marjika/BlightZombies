@@ -3,12 +3,15 @@
    
     position: fixed;
     bottom: 100px;
-    background-color: #9eafb8;
-    max-width: 250px;
+    background-color: #606060;
+    max-width: 500px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 2;
+    color: whitesmoke;
+    padding: 10px;
+    font-size: 16px;
 }
 
 .dropup:hover .dropbtn {
-    background-color: #9eafb8;
+    background-color: #484848;
 }
