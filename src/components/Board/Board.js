@@ -49,7 +49,9 @@ class Board extends React.Component {
             show: false,
             modalText: "",
             outbreaks: 0,
-            moves: 0
+            moves: 0,
+            sound: false,
+            audio: ""
         };
     }
 
@@ -67,15 +69,12 @@ class Board extends React.Component {
         const ctx = canvas.getContext("2d")
         const img = this.refs.image
 
-        img.onload = () => {
-            ctx.drawImage(img, 0, 0, img.width, img.height,
-                0, 0, canvas.width, canvas.height);
-
+        ctx.drawImage(img, 0, 0, img.width, img.height,    
+            0, 0, canvas.width, canvas.height);
             this.state.infections.map((item, index) => {
                 circle(ctx, cities[index].x, cities[index].y, item)
             });
         }
-    }
 
     clearCanvas() {
         const canvas = this.refs.canvas
@@ -88,14 +87,11 @@ class Board extends React.Component {
         const ctx = canvas.getContext("2d")
         const img = this.refs.image
 
-        img.onload = () => {
-            ctx.drawImage(img, 0, 0, img.width, img.height,
-                0, 0, canvas.width, canvas.height);
-
+        ctx.drawImage(img, 0, 0, img.width, img.height,    
+            0, 0, canvas.width, canvas.height);
             this.state.infections.map((item, index) => {
                 circle(ctx, cities[index].x, cities[index].y, item)
             });
-        }
     }
 
 
@@ -107,14 +103,16 @@ class Board extends React.Component {
     }
 
     hideModal = () => {
-        setTimeout(() => this.setState({ show: !this.state.show }), 2000);
+        setTimeout(() => this.setState({ show: !this.state.show, sound: false }), 2000);
     }
 
     //modals for finding players needed items and bringing them to CDC in Atlanta
     foundSample = () => {
         if (!this.state.sampleFound) {
             this.setState({ sampleFound: true });
-            this.setState({ modalText: "You found a DNA sample of the virus" }, () => {
+            this.setState({ modalText: "You found a DNA sample of the virus." }, () => {
+                this.setState({audio: "virus"})
+                this.setState({sound: true})
                 this.showModal();
             })
         }
@@ -123,7 +121,9 @@ class Board extends React.Component {
     foundProtein = () => {
         if (!this.state.proteinFound) {
             this.setState({ proteinFound: true });
-            this.setState({ modalText: "You found a plant with the anti-Zombie protein" }, () => {
+            this.setState({ modalText: "You found a plant with the anti-Zombie protein." }, () => {
+                this.setState({audio: "virus"})
+                this.setState({sound: true})
                 this.showModal();
             })
         }
@@ -132,7 +132,9 @@ class Board extends React.Component {
     foundScientist = () => {
         if (!this.state.scientistFound) {
             this.setState({ scientistFound: true });
-            this.setState({ modalText: "You found the missing scientist, Dr. Jasper" }, () => {
+            this.setState({ modalText: "You found the missing scientist, Dr. Jasper." }, () => {
+                this.setState({audio: "virus"})
+                this.setState({sound: true})
                 this.showModal();
             })
         }
@@ -141,7 +143,9 @@ class Board extends React.Component {
     foundImmuneMan = () => {
         if (!this.state.immuneManFound) {
             this.setState({ immuneManFound: true });
-            this.setState({ modalText: "You found an immune patient" }, () => {
+            this.setState({ modalText: "You found an immune patient." }, () => {
+                this.setState({audio: "virus"})
+                this.setState({sound: true})
                 this.showModal();
             })
         }
@@ -150,7 +154,9 @@ class Board extends React.Component {
     mission1 = () => {
         if (!this.state.missionOne) {
             this.setState({ missionOne: true });
-            this.setState({ modalText: "Mission complete. Help the others" }, () => {
+            this.setState({ modalText: "Mission complete. Help the others." }, () => {
+                this.setState({audio: "intro"})
+                this.setState({sound: true})
                 this.showModal();
             })
             if (this.state.missionTwo && this.state.missionThree && this.state.missionFour) {
@@ -162,7 +168,9 @@ class Board extends React.Component {
     mission2 = () => {
         if (!this.state.missionTwo) {
             this.setState({ missionTwo: true });
-            this.setState({ modalText: "Mission complete. Help the others" }, () => {
+            this.setState({ modalText: "Mission complete. Help the others." }, () => {
+                this.setState({audio: "intro"})
+                this.setState({sound: true})
                 this.showModal();
             })
             if (this.state.missionOne && this.state.missionThree && this.state.missionFour) {
@@ -174,7 +182,9 @@ class Board extends React.Component {
     mission3 = () => {
         if (!this.state.missionThree) {
             this.setState({ missionThree: true });
-            this.setState({ modalText: "Mission complete. Help the others" }, () => {
+            this.setState({ modalText: "Mission complete. Help the others." }, () => {
+                this.setState({audio: "intro"})
+                this.setState({sound: true})
                 this.showModal();
             })
             if (this.state.missionOne && this.state.missionTwo && this.state.missionFour) {
@@ -186,7 +196,9 @@ class Board extends React.Component {
     mission4 = () => {
         if (!this.state.missionFour) {
             this.setState({ missionFour: true });
-            this.setState({ modalText: "Mission complete. Help the others" }, () => {
+            this.setState({ modalText: "Mission complete. Help the others." }, () => {
+                this.setState({audio: "intro"})
+                this.setState({sound: true})
                 this.showModal();
             })
             if (this.state.missionOne && this.state.missionTwo && this.state.missionThree) {
@@ -246,7 +258,11 @@ class Board extends React.Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Modal show={this.state.show} modalText={this.state.modalText}></Modal>
+                        <Modal 
+                            show={this.state.show} 
+                            modalText={this.state.modalText}
+                            audio={this.state.audio}
+                            sound={this.state.sound}></Modal>
                     </Row>
                     <Row>
                         <Footer

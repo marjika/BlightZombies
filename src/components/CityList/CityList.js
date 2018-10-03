@@ -42,7 +42,9 @@ class CityList extends React.Component {
           currentLocation5: 22,
           show: false,
           modalText: "",
-          cityInfections: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          cityInfections: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          sound: false,
+          audio: ""
         }
     }
 
@@ -129,6 +131,8 @@ class CityList extends React.Component {
         outbreakCount++;
         this.setState({ modalText: "You've had an outbreak " + outbreakCount + " times." }, () => {
           this.props.sendStats(actions, outbreakCount);
+          this.setState({audio: "outbreak"})
+          this.setState({sound: true})
           this.showModal();
       })   
       } else {
@@ -144,7 +148,7 @@ class CityList extends React.Component {
     }
 
     hideModal = () => {
-      setTimeout(()=>this.setState({show: false}), 2000);
+      setTimeout(()=>this.setState({show: false, sound: false }), 2000);
     }
 
     infectionArrayChange = (index, value) => {
@@ -240,7 +244,11 @@ class CityList extends React.Component {
         </li>
       ))}
     </ul>
-    <Modal show={this.state.show} modalText={this.state.modalText}></Modal>
+    <Modal 
+      show={this.state.show} 
+      modalText={this.state.modalText}
+      audio={this.state.audio}
+      sound={this.state.sound}></Modal>
     </div>
   )}
 };

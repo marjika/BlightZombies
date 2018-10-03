@@ -7,6 +7,9 @@ const Footer = (props) => (
   <div className="navbar-footer">
       <ul className="nav">
         <li className="nav-item">
+            <Instructions />
+        </li>
+        <li className="nav-item">
             <div className="moves">Moves until random infection: {props.moves}|</div>
             <div className="losses">Outbreaks: {props.outbreaks}|</div>
         </li>
@@ -25,9 +28,6 @@ const Footer = (props) => (
         <li className="nav-item">
             <div className="sample">Immune patient found: {props.immuneMan && '✔'}|</div>
             <div className="mission1">Mission 4 Complete: {props.mission4 && '✔'}|</div>
-        </li>
-        <li className="nav-item">
-            <Instructions />
         </li>
       </ul>
   </div>
