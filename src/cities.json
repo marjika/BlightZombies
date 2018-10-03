@@ -3,15 +3,15 @@
         "id": 1,
         "location": "Atlanta",
         "connections": ["Charlotte", "Jacksonville", "Pittsburgh"], 
-        "x": 665,
+        "x": 680,
         "y": 385    
     },
     {
         "id": 2,
         "location": "Nashville",
         "connections": ["Columbus", "New Orleans", "Charlotte"], 
-        "x": 630,
-        "y": 350
+        "x": 635,
+        "y": 340
     },
     {
         "id": 3,
@@ -24,8 +24,8 @@
         "id": 4,
         "location": "Jacksonville",
         "connections": ["New Orleans", "Atlanta", "Des Moines"], 
-        "x": 720,
-        "y": 455
+        "x": 725,
+        "y": 450
     },
     {
         "id": 5,
@@ -38,22 +38,22 @@
         "id": 6,
         "location": "Pittsburgh",
         "connections": ["Atlanta", "Rochester", "Washington, D.C."], 
-        "x": 720,
-        "y": 240
+        "x": 725,
+        "y": 235
     },
     {
         "id": 7,
         "location": "New York",
         "connections": ["Boston", "Washington, D.C.", "Rochester"], 
-        "x": 800,
-        "y": 220
+        "x": 805,
+        "y": 215
     },
     {
         "id": 8,
         "location": "Boston",
         "connections": ["Washington, D.C.", "New York", "Columbus"], 
-        "x": 830,
-        "y": 180
+        "x": 835,
+        "y": 175
     },
     {
         "id": 9,
@@ -73,8 +73,8 @@
         "id":11,
         "location": "Des Moines",
         "connections": ["Jacksonville", "Denver", "Detroit"], 
-        "x": 520,
-        "y": 250
+        "x": 525,
+        "y": 245
     },
     {
         "id": 12,
@@ -101,8 +101,8 @@
         "id": 15,
         "location": "Minneapolis",
         "connections": ["Chicago", "Detroit", "Seattle"], 
-        "x": 520,
-        "y": 185
+        "x": 525,
+        "y": 180
     },
     {
         "id": 16,
