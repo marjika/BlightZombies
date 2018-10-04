@@ -8,7 +8,7 @@ class Characters extends Component {
 
   state = {
     sound: false,
-    audio: "intro"
+    audio: "music"
   };
 
   componentDidMount = () => {
@@ -19,7 +19,7 @@ class Characters extends Component {
 
 
   stopIntro = () => {
-    setTimeout(() => {this.setState({ sound: false })}, 20000);
+    setTimeout(() => {this.setState({ sound: false })}, 96000);
 }
 
   skipToGame = () => {

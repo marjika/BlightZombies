@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import Sound from 'react-sound';
 
-import IntroAudio from './sounds/ScarySound.mp3';
-import Background1Audio from './sounds/thunder.mp3';
-import VirusAudio from './sounds/shotgun.mp3';
-import OutbreakAudio from './sounds/Dramatic-heartbeat-sound-effect.mp3';
+import IntroAudio from './sounds/intro.mp3';
+import CompleteAudio from './sounds/Mission-complete.mp3';
+import WinAudio from './sounds/win.mp3';
+import LoseAudio from './sounds/lose.mp3';
+import OutbreakAudio from './sounds/Outbreak.mp3';
+import ProteinAudio from './sounds/anti-zombie-protein.mp3';
+import DNAAudio from './sounds/DNAFound.mp3';
+import DoctorAudio from './sounds/Dr-jasper.mp3';
+import PatientAudio from './sounds/immune-patient.mp3';
+import MusicAudio from './sounds/music.mp3';
+
 
 class SoundComponent extends Component {
 
@@ -12,14 +19,24 @@ class SoundComponent extends Component {
         switch(this.props.audio) {
             case "intro":
                 return IntroAudio
-            case "background1":
-                return Background1Audio
+            case "complete":
+                return CompleteAudio
             case "virus":
-                return VirusAudio
+                return DNAAudio
             case "outbreak":
                 return OutbreakAudio
-            // case "found item":
-            //    return {someFile}
+            case "protein":
+                return ProteinAudio
+            case "doctor":
+                return DoctorAudio
+            case "patient":
+                return PatientAudio
+            case "win":
+                return WinAudio
+            case "lose":
+                return LoseAudio
+            case "music":
+                return MusicAudio
             default:
                 
         }

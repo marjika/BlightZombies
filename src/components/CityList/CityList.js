@@ -148,7 +148,7 @@ class CityList extends React.Component {
     }
 
     hideModal = () => {
-      setTimeout(()=>this.setState({show: false, sound: false }), 2000);
+      setTimeout(()=>this.setState({show: false, sound: false }), 9000);
     }
 
     infectionArrayChange = (index, value) => {
