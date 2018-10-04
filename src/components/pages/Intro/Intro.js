@@ -17,7 +17,7 @@ class Intro extends Component {
   }
 
   stopIntro = () => {
-    setTimeout(() => {this.setState({ sound: false }), this.skipToGame()}, 20000);
+    setTimeout(() => {this.setState({ sound: false }), this.skipToGame()}, 19000);
 }
 
   skipToGame = () => {
