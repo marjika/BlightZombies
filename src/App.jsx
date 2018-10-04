@@ -15,6 +15,7 @@ import Home from './components/Home'
 const DisplayLinks = props => {
 	if (props.loggedIn) {
 		return (
+		<div className="back">
 			<nav className="navbar">
 				<ul className="nav">
 					<li className="nav-item">
@@ -42,9 +43,11 @@ const DisplayLinks = props => {
 					</li>
 				</ul>
 			</nav>
+		</div>
 		)
 	} else {
 		return (
+		<div className="back">
 			<nav className="navbar">
 				<ul className="nav">
 					<li className="nav-item">
@@ -64,6 +67,7 @@ const DisplayLinks = props => {
 					</li>
 				</ul>
 			</nav>
+		</div>
 		)
 	}
 }
