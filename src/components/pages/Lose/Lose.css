@@ -1,1 +1,21 @@
+ .loseGame {
+    background-image: url("../../images/loseGame.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 860px;
+  }
 
+  .winTitle {
+    background-color: #282828;
+    color: whitesmoke;
+    font-size: 80px;
+    border-radius: .3em;
+    border: whitesmoke solid 5px;
+    padding: .25em;
+    position: absolute;
+    margin-top: 200px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}

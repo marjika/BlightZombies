@@ -13,7 +13,6 @@ class Characters extends Component {
 
   componentDidMount = () => {
     this.setState({ sound: true })
-    console.log(this.state.sound)
     this.stopIntro();
   }
 

@@ -12,10 +12,10 @@ class City extends React.Component {
     constructor(props){
         super(props)
         
-    this.state = {
-        infectionRate: 0
+        this.state = {
+            infectionRate: 0
+        }
     }
-}
 
     componentDidMount() {
         this.increaseInfectionLevel(this.props.cityId);
@@ -42,9 +42,8 @@ class City extends React.Component {
                 } else {
                 this.setState({ infectionRate: infectionRate }, () => {
                     this.props.infectionArrayChange(this.props.id, this.state.infectionRate)
-                });
-            }
-
+                    });
+                }
             }
         }
         infectionLevel = randomInfection();
@@ -78,8 +77,6 @@ class City extends React.Component {
     
     <div className="city">
 
-        {/* <h5>{this.props.name}</h5> */}
-        {/* <h6>{this.state.infectionRate}</h6> */}
         {(this.props.id===this.props.person1LocationId) &&
         <div className="nextLocation"><h6>is in {this.props.name}. Where do you want her to go next?</h6>
         <div>{this.props.connections.map((place) => (
@@ -115,27 +112,11 @@ class City extends React.Component {
           Reduce Zombies in {this.props.name}
         </button></div>
         }
-        {/* {this.state.infectionRate > 0 && (this.props.id===this.props.person2LocationId) &&
-        <div className="heal"><h6>Fight infection in this city: </h6><button onClick={(event) => { this.heal(this.props.id); this.props.increaseCount();}}>
-            Cure Zombies in {this.props.name}
-        </button></div>
-        }
-        {this.state.infectionRate > 0 && (this.props.id===this.props.person3LocationId) &&
-        <div className="heal"><h6>Fight infection in this city: </h6><button onClick={(event) => { this.heal(this.props.id); this.props.increaseCount();}}>
-            Cure Zombies in {this.props.name}
-        </button></div>
-        }
-        {this.state.infectionRate > 0 && (this.props.id===this.props.person4LocationId) &&
-        <div className="heal"><h6>Fight infection in this city: </h6><button onClick={(event) => { this.heal(this.props.id); this.props.increaseCount();}}>
-            Cure Zombies in {this.props.name}
-        </button></div>
-        } */}
         {this.state.infectionRate > 0 && (this.props.id===this.props.person5LocationId) &&
         <div className="heal"><button className="map-button" onClick={(event) => { this.doubleHeal(this.props.id); this.props.increaseCount();}}>
             Reduce Zombies (X2) in {this.props.name}
         </button></div>
-        }
-   
+        }   
     </div>
 
 )}};
