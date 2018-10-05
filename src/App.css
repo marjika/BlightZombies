@@ -23,26 +23,25 @@
   to { transform: rotate(360deg); }
 }
 
-@import url('https://fonts.googleapis.com/css?family=Oswald:500');
-.back{
-  position: fixed;
-  left: 0;
-  top: 60;
-  width: 100%;
-  height: 100%;
-  background-size:cover;
+.col-md-3, .col-md-9 {
+  margin: 0;
+  padding: 0;
 }
-.thx{
-  position: fixed;
-  left:50%;
-  transform:translateX(-50%);
-  bottom: 15px;
+.navbar {
+  background-image: url("./components/images/blueRust.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 15px;
+  box-shadow: 0px 20px 50px 5px black;
 }
+
+
 nav{
   width: 100%;
   position: fixed;
-  top:50px;
-  align-self:center;
+  /* top:50px; */
+  text-align:center;
 }
 nav a{
   font-family: 'Oswald', sans-serif;
@@ -55,7 +54,7 @@ nav a{
   letter-spacing:1px;
   position:relative;
   display:inline-block;
-}
+} 
 nav a:before{
   content:'';
   position: absolute;
@@ -69,6 +68,16 @@ nav a:hover:before{
   animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 
 }
+
+
+
+
+
+
+
+
+
+
 @keyframes in{
   0%{
     width: 0;
@@ -103,6 +112,4 @@ nav a:hover:before{
     transform:translateY(0);
   }
 }
-
-
 
