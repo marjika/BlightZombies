@@ -45,7 +45,7 @@ class SignupForm extends Component {
 			return <Redirect to={{ pathname: this.state.redirectTo }} />
 		}
 		return (
-		<div class="signUp">
+		<div className="signUp">
 			<form className="SignupForm" action="#" method="post">
 				<h2>Sign Up</h2>
 				<label htmlFor="username" class="floatLabel">Username: </label>
