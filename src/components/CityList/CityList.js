@@ -159,7 +159,6 @@ class CityList extends React.Component {
       this.setState({ cityInfections:infectArray }, () => {
         this.props.cityInfectionArrayChange(this.state.cityInfections)
       })
-      //console.log(this.state.cityInfections)
      }
 
     render() {

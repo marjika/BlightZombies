@@ -8,17 +8,6 @@
     text-align: center;
 }
   
-/* .modal.modal-main {
-      position:fixed;
-      background: white;
-      width: 40%;
-      height: auto;
-      top:50%;
-      left:50%;
-      transform: translate(-50%,-50%);
-    } */
-  
-  
   .display-block {
     display: block;
   }
@@ -28,14 +17,23 @@
   }
 
   .card {
+    background-image: url("../images/blue.jpg");
     background-size: cover;
     background-position: center;
     background-clip: content-box;
     border: 5px solid whitesmoke;
-    height: 185px;
-    width: 390px;
+    position: fixed;
+    width: 30%;
+    height: auto;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    position: relative;
     margin: 0 auto;
-    margin-top: 100px;
+  }
+
+  .modalTitle {
+    color: whitesmoke;
+    padding: 10%;
+    border-bottom: none;
   }

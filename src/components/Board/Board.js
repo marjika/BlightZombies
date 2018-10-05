@@ -60,39 +60,32 @@ class Board extends React.Component {
 
     componentDidUpdate() {
         this.updateCanvas();
-    }
+    }   
 
-    // updateCanvas() {
-    //     const ctx = this.refs.canvas.getContext('2d');
-    
-    //     var imageObj1 = new Image();
-    //     imageObj1.src = 'https://s-media-cache-ak0.pinimg.com/236x/d7/b3/cf/d7b3cfe04c2dc44400547ea6ef94ba35.jpg'
-    //  imageObj1.onload = function() {
-    //         ctx.drawImage(imageObj1,0,0);
-    // }
-    
-
+    //canvas for map gameplay, displayscities with circle function, .onload for componentDidMount
     drawCanvas() {
         const canvas = this.refs.canvas
         const ctx = canvas.getContext("2d")
         const img = new Image();
         img.src = usmap
 
-        img.onload = () =>{
-        ctx.drawImage(img, 0, 0, img.width, img.height,    
-            0, 0, canvas.width, canvas.height);
-            this.state.infections.map((item, index) => {
-                circle(ctx, cities[index].x, cities[index].y, item)
-            });
-        }
+            img.onload = () =>{
+            ctx.drawImage(img, 0, 0, img.width, img.height,    
+                0, 0, canvas.width, canvas.height);
+                this.state.infections.map((item, index) => {
+                    circle(ctx, cities[index].x, cities[index].y, item)
+                });
+            }
         }
 
+    //function to clear canvas before it is updated
     clearCanvas() {
         const canvas = this.refs.canvas
         const ctx = canvas.getContext("2d")
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
 
+    //updates canvas/map when city infections change
     updateCanvas() {
         const canvas = this.refs.canvas
         const ctx = canvas.getContext("2d")
@@ -230,7 +223,6 @@ class Board extends React.Component {
 
     //Gets the number of moves and outbreaks from CityList
     sendStats = (actions, outbreakCount) => {
-
         this.setState({ moves: actions, outbreaks: outbreakCount })
     }
 
@@ -239,6 +231,7 @@ class Board extends React.Component {
         return (
             <Container fluid>
                 <div className="Board">
+                    <Row><div  style={{ height: "25px" }}></div></Row>
                     <Row>
                         <Col size="md-9">
                             <canvas ref="canvas" width={1000} height={563} />
