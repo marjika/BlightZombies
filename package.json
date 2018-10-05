@@ -33,7 +33,7 @@
 		"eject": "react-scripts eject",
 		"dev": "concurrently \"react-scripts start\" \"nodemon server/server.js\"",
 		"prod": "export NODE_ENV=\"production\" && nodemon server/server.js",
-		"install": "npm install",
+		"install": "",
     	"heroku-postbuild": "npm run build"
 	},
 	"proxy": "http://localhost:8080"
