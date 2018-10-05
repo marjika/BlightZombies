@@ -34,7 +34,6 @@
 		"dev": "concurrently \"react-scripts start\" \"nodemon server/server.js\"",
 		"prod": "export NODE_ENV=\"production\" && nodemon server/server.js",
 		"install": "cd client && yarn install",
-    	"heroku-prebuild": "cd client && npm run build",
     	"heroku-postbuild": "npm run build"
 	},
 	"proxy": "http://localhost:8080"
