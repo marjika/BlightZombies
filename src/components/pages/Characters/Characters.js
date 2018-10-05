@@ -27,7 +27,7 @@ class Characters extends Component {
   };
 
   toGame() {
-    window.location.assign("/game")
+    this.props.history.push("/game")
 }
 
   render() {

@@ -38,11 +38,11 @@ class Game extends Component {
   };
 
   toLose() {
-    window.location.assign("/lose")
+    this.props.history.push("/lose")
 }
 
   toWin() {
-    window.location.assign("/win")
+    this.props.history.push("/win")
   }
 
   render() {
