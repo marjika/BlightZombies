@@ -167,7 +167,7 @@ class CityList extends React.Component {
     <div className="cities">
       <ul className="city-list">
       {this.props.cities.map(item => (
-        <li key={item.id}>
+        <li key={item.id} className="listItem">
         {item.id===this.state.currentLocation1 &&
         <div className="players">
           <Player
