@@ -22,6 +22,10 @@
     font-size: 10px;
   }
 
+.map-button:hover .map-button {
+    background-color: #484848;
+}
+
 .city {
       color: whitesmoke
   }
