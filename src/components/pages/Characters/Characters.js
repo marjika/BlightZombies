@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import SoundComponent from "../../SoundComponent";
 import Story from "../../Story";
 import './Characters.css';
-import blue from "../../images/blue.jpg"
 
 class Characters extends Component {
 
@@ -31,8 +30,8 @@ class Characters extends Component {
 
   render() {
     return (
-      <div className="characters" style={{ backgroundImage: `url(${blue})`}}>
-      <h1>Your Best People</h1>
+      <div className="characters">
+      <h1 className="team">Meet your team</h1>
         <SoundComponent
             sound={this.state.sound}
             audio={this.state.audio}

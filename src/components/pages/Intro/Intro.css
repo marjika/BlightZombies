@@ -5,3 +5,12 @@
     background-repeat: no-repeat;
     height: 860px;
 }
+
+.introtext {
+    font-family: 'Oswald', sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+    text-decoration:none;
+    font-size: 30px;
+    margin-top: 65px;
+}
