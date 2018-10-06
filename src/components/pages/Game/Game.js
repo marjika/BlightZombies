@@ -63,5 +63,3 @@ class Game extends Component {
 }
 
 export default Game;
-
-// style={{ backgroundImage: `url(${blue})`}}

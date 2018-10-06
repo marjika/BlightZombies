@@ -8,7 +8,7 @@ class Characters extends Component {
 
   state = {
     sound: false,
-    audio: "music"
+    audio: "cards"
   };
 
   componentDidMount = () => {
