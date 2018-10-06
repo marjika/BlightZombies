@@ -26,9 +26,9 @@
       color: whitesmoke
   }
 
-div:empty {
+/* div:empty {
     display: none;
-} 
+}  */
 
 .city .nextLocation{ 
     position: relative;
