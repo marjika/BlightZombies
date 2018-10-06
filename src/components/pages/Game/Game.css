@@ -1,7 +1,7 @@
-body {
+.Game {
   background-image: url("../../images/metal.jpg");
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
-  height: 860px;
+  background-repeat: repeat-y;
+  height: 960px;
 }

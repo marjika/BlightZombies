@@ -7,6 +7,7 @@ import { Col, Row, Container } from "../Grid";
 import cities from "../../cities.json";
 import staff from "../../players.json";
 import usmap from '../images/USA.jpg';
+import './Board.css';
 
 function circle(ctx, x, y, value) {
     ctx.beginPath();

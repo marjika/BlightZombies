@@ -1,7 +1,18 @@
 .characters {
-  background-image: url("../../images/blue.jpg");
+  background-image: url("../../images/metal.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   height: 860px;
+}
+
+.team {
+  font-family: 'Oswald', sans-serif;
+  font-weight:800;
+  text-transform:uppercase;
+  text-decoration:none;
+  font-size: 65px;
+  color: white;
+  padding-top: 65px;
+  text-shadow: black 5px 5px 20px;
 }

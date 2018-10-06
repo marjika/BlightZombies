@@ -31,6 +31,11 @@ class Intro extends Component {
             sound={this.state.sound}
             audio={this.state.audio}
           />  
+          <p className="introtext">No one knows where the virus come from...</p> 
+          <p className="introtext">95% of the world is dead, the last 5% is ravaging for food & supplies.</p> 
+          <p className="introtext">Zombies are running the country...</p>
+          <p className="introtext">There's a team of 5 people that can save the world, but they need a new CDC Director.</p> 
+          <p className="introtext">The last director was infected by the virus...</p>
       </div>
     );
   }
