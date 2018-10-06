@@ -2,13 +2,14 @@
 .instructionsContent {   
     position: fixed;
     bottom: 100px;
-    background-color: #606060;
-    max-width: 500px;
+    background-color: white;
+    opacity: .9;
+    max-width: 1000px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 2;
     color: whitesmoke;
     padding: 10px;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .dropup:hover .dropbtn {
