@@ -19,7 +19,6 @@ class Instructions extends Component {
     
     this.setState({ showInstructions: true }, () => {
       document.addEventListener('click', this.closeInstructions);
-      console.log('clicked')
     });
   }
   

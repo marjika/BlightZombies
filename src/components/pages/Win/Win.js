@@ -16,7 +16,7 @@ class Win extends Component {
   }
 
   stopIntro = () => {
-    setTimeout(() => {this.setState({ sound: false })}, 11000);
+    setTimeout(() => {this.setState({ sound: false })}, 17000);
   }
 
   render() {        

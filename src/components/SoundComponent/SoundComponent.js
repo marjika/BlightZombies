@@ -10,7 +10,7 @@ import ProteinAudio from './sounds/anti-zombie-protein.mp3';
 import DNAAudio from './sounds/DNAFound.mp3';
 import DoctorAudio from './sounds/Dr-jasper.mp3';
 import PatientAudio from './sounds/immune-patient.mp3';
-import MusicAudio from './sounds/music.mp3';
+import CardsIntro from './sounds/Cards-intro.mp3';
 
 
 class SoundComponent extends Component {
@@ -35,8 +35,8 @@ class SoundComponent extends Component {
                 return WinAudio
             case "lose":
                 return LoseAudio
-            case "music":
-                return MusicAudio
+            case "cards":
+                return CardsIntro
             default:
                 
         }
