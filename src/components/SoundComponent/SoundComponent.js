@@ -11,6 +11,7 @@ import DNAAudio from './sounds/DNAFound.mp3';
 import DoctorAudio from './sounds/Dr-jasper.mp3';
 import PatientAudio from './sounds/immune-patient.mp3';
 import CardsIntro from './sounds/Cards-intro.mp3';
+import HomeAudio from './sounds/home.mp3';
 
 
 class SoundComponent extends Component {
@@ -37,6 +38,8 @@ class SoundComponent extends Component {
                 return LoseAudio
             case "cards":
                 return CardsIntro
+            case "home":
+                return HomeAudio
             default:
                 
         }

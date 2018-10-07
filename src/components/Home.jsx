@@ -1,43 +1,34 @@
-import React from 'react'
-import './Home.css'
+import React, { Component } from 'react'
+import './Home.css';
+import SoundComponent from "./SoundComponent";
+
 // TODO - add proptypes
+class Home extends Component {
 
-// const Home = props => {
-// 	if (props.user) {
-// 		return (
-// 			<div className="Home">
-// 			<h1>Blight or Zombie-itis</h1>
-// 				<p>Current User:</p>
-// 				<code>
-// 					{JSON.stringify(props)}
-// 				</code>
-// 			</div>
-// 		)
-// 	} else {
-// 		return (
-// 			<div className="Home">
-// 			<h1>Blight or Zombie-itis</h1>
-// 				<p>Current User:</p>
-// 				<code>
-// 					{JSON.stringify(props)}
-// 				</code>
-// 			</div>
-// 		)
-// 	}
-// }
-
-const Home = props => {
-	if (props.user) {
-		return (
-			<div className="Home">
-			</div>
-		)
-	} else {
-		return (
-			<div className="Home">
-			</div>
-		)
+	state = {
+	  sound: false,
+	  audio: "home"
+	};
+  
+	componentDidMount = () => {
+	  this.setState({ sound: true })
+	  this.stopIntro();
 	}
-}
 
+	stopIntro = () => {
+		setTimeout(() => {this.setState({ sound: false })}, 10000);
+	}
+    
+	render() {		  
+	  return (
+		<div className="Home">
+			<SoundComponent
+			  sound={this.state.sound}
+			  audio={this.state.audio}
+			/> 
+		</div>
+  	  )
+	}
+  };
+  
 export default Home
