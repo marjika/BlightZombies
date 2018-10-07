@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Board from "../../Board";
+import BackgroundSound from "../../BackgroundSound";
 import './Game.css';
 //import blue from "../../images/blue.jpg"
 
@@ -57,6 +58,7 @@ class Game extends Component {
           winGame={this.winGame}
           loseGame={this.loseGame}
         />
+        <BackgroundSound />
       </div>
     );
   }
